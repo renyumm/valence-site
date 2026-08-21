@@ -1,5 +1,6 @@
 services:
   valence-site:
+    build: .
     image: ghcr.io/renyumm/valence-site:latest
     container_name: valence-site
     restart: unless-stopped
