@@ -7,15 +7,15 @@ const i18n = {
     "hero.ctaPrimary": "查看三款产品", "hero.ctaSecondary": "了解 Valence",
     "hero.ionRole": "数据原子", "hero.valenceRole": "AI 价键中枢", "hero.reactorRole": "工业控制", "hero.catalystRole": "AI 协调与催化",
     "hero.visualText": "离子化数据，在 Catalyst 作用下改变连接方式，由 VALENCE 形成新智能，再由 REACTOR 作用于现场。",
-    "tags.runtime": "三款独立产品", "tags.plugins": "按需组合购买", "tags.open": "插件与 API 双向开放",
+    "tags.runtime": "三款独立产品", "tags.plugins": "按需组合部署", "tags.open": "插件与 API 双向开放",
 
-    "runtime.eyebrow": "THREE PRODUCTS · ONE RUNTIME", "runtime.title": "三款产品，可以单买，也可以组合成完整反应链。",
+    "runtime.eyebrow": "THREE PRODUCTS · ONE RUNTIME", "runtime.title": "三款产品，可以单独部署，也可以组合成完整反应链。",
     "runtime.subtitle": "ION、VALENCE 与 REACTOR 都是可独立交付的产品，并共享一致的 Runtime。客户可以从一个问题开始，随后按业务需要增加第二款或第三款产品，而不必推倒重来。",
-    "runtime.buyOneTitle": "单产品", "runtime.buyOneDesc": "只购买当前最需要的数据、AI 或控制能力。",
+    "runtime.buyOneTitle": "单产品部署", "runtime.buyOneDesc": "先部署当前最需要的数据、AI 或控制能力。",
     "runtime.buyTwoTitle": "自由组合", "runtime.buyTwoDesc": "任意两款产品共享上下文、接口与运行结果。",
     "runtime.buyAllTitle": "完整反应链", "runtime.buyAllDesc": "ION → VALENCE → REACTOR 贯通数据、AI 与控制。",
     "runtime.ion": "连接、治理并理解企业数据，让数据成为可被 AI 调用的高活性“离子”。",
-    "runtime.valence": "作为智能中枢连接人、Agent、专家、Skill 与任务。Catalyst 在其中负责理解、协调、委派与汇总。",
+    "runtime.valence": "作为智能中枢连接人、Agent 与任务。Catalyst 在其中负责理解、协调、委派与汇总。",
     "runtime.reactor": "把智能决策转化为可验证、受约束的控制策略，并将现场反馈送回 Runtime。",
     "runtime.catalyst": "Catalyst 不是第四款产品，而是 VALENCE 的 AI 协调者：它发现可用能力，选择 Agent 与 Skill，并让任务持续向结果推进。",
     "runtime.flow": "理解 → 协调 → 委派 → 汇总",
@@ -42,10 +42,24 @@ const i18n = {
     "integration.cta": "了解 Valence", "footer.desc": "三款产品，一套从数据到控制的 Runtime。",
 
     "modal.eyebrow": "ABOUT VALENCE", "modal.title": "三产品体系中的 AI 中枢",
-    "modal.lead": "VALENCE 位于 ION 数据与 REACTOR 控制之间。它让数据进入 Agent、专家和 Skill 的协作过程，再把形成的决策送往控制与执行；Catalyst 是其中负责协调这场“反应”的 AI 角色。",
-    "modal.m1Title": "核心中枢", "modal.m1Desc": "连接上下文、Agent、专家、Skill、任务与自动化，让复杂工作持续推进。",
+    "modal.lead": "VALENCE 位于 ION 数据与 REACTOR 控制之间。它让数据进入 Agent 与任务的协作过程，再把形成的决策送往控制与执行；Catalyst 是其中负责协调这场“反应”的 AI 角色。",
+    "modal.m1Title": "核心中枢", "modal.m1Desc": "连接上下文、Agent、任务与自动化，让复杂工作持续推进。",
     "modal.m2Title": "插件容器", "modal.m2Desc": "ION、REACTOR 与第三方产品都能作为插件进入，扩展 VALENCE 的能力边界。",
-    "modal.m3Title": "API 能力", "modal.m3Desc": "VALENCE 也能整体作为 API，将协调、任务与执行能力提供给其他系统。"
+    "modal.m3Title": "API 能力", "modal.m3Desc": "VALENCE 也能整体作为 API，将协调、任务与执行能力提供给其他系统。",
+    "modal.demo": "展示 Demo",
+    "tour.ionLead": "让业务人员像提问一样使用数据。ION 连接数据库、指标与领域数据，把分散信息整理成可理解、可追溯、可被 AI 调用的数据语义。",
+    "tour.ionP1Title": "连接数据", "tour.ionP1Desc": "接入企业数据库与业务数据源，统一字段、指标与口径。",
+    "tour.ionP2Title": "理解数据", "tour.ionP2Desc": "通过自然语言问数、下钻和趋势分析，让数据直接服务业务判断。",
+    "tour.ionP3Title": "开放数据能力", "tour.ionP3Desc": "可独立部署，也可作为数据插件进入 VALENCE。",
+    "tour.valenceLead": "让 Agent、任务和自动化留在同一个业务现场。主对话持续，后台任务持续推进，过程与结果始终回到原来的上下文。",
+    "tour.valenceP1Title": "共享上下文", "tour.valenceP1Desc": "多人、多 Agent 与任务在同一 Pod 中连续协作。",
+    "tour.valenceP2Title": "可扩展 Runtime", "tour.valenceP2Desc": "ION、REACTOR、Agent 与第三方产品都能作为插件接入。",
+    "tour.valenceP3Title": "系统级 API", "tour.valenceP3Desc": "VALENCE 可以整体嵌入门户、业务系统和工业现场。",
+    "tour.catalyst": "理解意图、选择能力、协调 Agent，并将执行结果汇总回当前现场。",
+    "tour.reactorLead": "把智能决策转化为受控行动。REACTOR 面向设备、系统与现场控制，在明确目标、约束和安全边界后生成并运行策略。",
+    "tour.reactorP1Title": "理解现场", "tour.reactorP1Desc": "映射设备、对象、状态与可控变量。",
+    "tour.reactorP2Title": "验证策略", "tour.reactorP2Desc": "建立目标和约束，经过仿真与安全校验后再运行。",
+    "tour.reactorP3Title": "形成闭环", "tour.reactorP3Desc": "把执行状态与效果反馈送回 Runtime，进入下一轮反应。"
   },
 
   en: {
@@ -56,15 +70,15 @@ const i18n = {
     "hero.ctaPrimary": "Explore the Products", "hero.ctaSecondary": "About Valence",
     "hero.ionRole": "Data atoms", "hero.valenceRole": "AI bond core", "hero.reactorRole": "Industrial control", "hero.catalystRole": "AI coordination",
     "hero.visualText": "Ionized data changes its connections under Catalyst; VALENCE forms new intelligence, and REACTOR applies it to the operating world.",
-    "tags.runtime": "Three standalone products", "tags.plugins": "Buy and combine as needed", "tags.open": "Plugins and APIs",
+    "tags.runtime": "Three standalone products", "tags.plugins": "Deploy and combine as needed", "tags.open": "Plugins and APIs",
 
-    "runtime.eyebrow": "THREE PRODUCTS · ONE RUNTIME", "runtime.title": "Buy one product or combine all three into a complete reaction chain.",
+    "runtime.eyebrow": "THREE PRODUCTS · ONE RUNTIME", "runtime.title": "Deploy one product or combine all three into a complete reaction chain.",
     "runtime.subtitle": "ION, VALENCE and REACTOR are independently deliverable products built on one Runtime. Start with the problem in front of you, then add a second or third product without rebuilding the foundation.",
-    "runtime.buyOneTitle": "One product", "runtime.buyOneDesc": "Choose only the data, AI or control capability needed now.",
+    "runtime.buyOneTitle": "Single-product deployment", "runtime.buyOneDesc": "Deploy only the data, AI or control capability needed now.",
     "runtime.buyTwoTitle": "Combine freely", "runtime.buyTwoDesc": "Any two products share context, interfaces and run results.",
     "runtime.buyAllTitle": "Complete chain", "runtime.buyAllDesc": "ION → VALENCE → REACTOR connects data, AI and control.",
     "runtime.ion": "Connects, governs and understands enterprise data, turning it into active ions that AI can call safely.",
-    "runtime.valence": "The intelligence hub connecting people, agents, experts, Skills and tasks. Catalyst coordinates understanding, delegation and synthesis inside it.",
+    "runtime.valence": "The intelligence hub connecting people, agents and tasks. Catalyst coordinates understanding, delegation and synthesis inside it.",
     "runtime.reactor": "Turns intelligent decisions into verifiable, constrained control policies and returns operating feedback to the Runtime.",
     "runtime.catalyst": "Catalyst is not a fourth product. It is the AI coordinator inside VALENCE: discovering capabilities, selecting agents and Skills, and keeping work moving toward a result.",
     "runtime.flow": "Understand → Coordinate → Delegate → Synthesize",
@@ -91,10 +105,24 @@ const i18n = {
     "integration.cta": "About Valence", "footer.desc": "Three products. One Runtime from data to control.",
 
     "modal.eyebrow": "ABOUT VALENCE", "modal.title": "The AI core of a three-product system",
-    "modal.lead": "VALENCE sits between ION data and REACTOR control. It brings data into collaboration among agents, experts and Skills, then sends resulting decisions toward control and execution. Catalyst is the AI role coordinating that reaction.",
-    "modal.m1Title": "Core hub", "modal.m1Desc": "Connect context, agents, experts, Skills, tasks and automations so complex work keeps moving.",
+    "modal.lead": "VALENCE sits between ION data and REACTOR control. It brings data into collaboration among agents and tasks, then sends resulting decisions toward control and execution. Catalyst is the AI role coordinating that reaction.",
+    "modal.m1Title": "Core hub", "modal.m1Desc": "Connect context, agents, tasks and automations so complex work keeps moving.",
     "modal.m2Title": "Plugin host", "modal.m2Desc": "ION, REACTOR and third-party products plug in to extend the boundary of VALENCE.",
-    "modal.m3Title": "API capability", "modal.m3Desc": "VALENCE can also act as an API, providing coordination, tasks and execution capabilities to other systems."
+    "modal.m3Title": "API capability", "modal.m3Desc": "VALENCE can also act as an API, providing coordination, tasks and execution capabilities to other systems.",
+    "modal.demo": "Show Demo",
+    "tour.ionLead": "Let business users work with data by asking questions. ION connects databases, metrics and domain data, organizing fragmented information into understandable, traceable semantics that AI can call.",
+    "tour.ionP1Title": "Connect data", "tour.ionP1Desc": "Connect enterprise databases and business sources while aligning fields, metrics and definitions.",
+    "tour.ionP2Title": "Understand data", "tour.ionP2Desc": "Use natural-language questions, drilldowns and trends to support business judgment directly.",
+    "tour.ionP3Title": "Open data capability", "tour.ionP3Desc": "Deploy independently or plug into VALENCE as the data product.",
+    "tour.valenceLead": "Keep agents, tasks and automations in one business workspace. The main conversation continues, background work advances, and progress and results return to the same context.",
+    "tour.valenceP1Title": "Shared context", "tour.valenceP1Desc": "People, multiple agents and tasks collaborate continuously in one Pod.",
+    "tour.valenceP2Title": "Extensible Runtime", "tour.valenceP2Desc": "ION, REACTOR, agents and third-party products can all plug in.",
+    "tour.valenceP3Title": "System-level API", "tour.valenceP3Desc": "Embed VALENCE as a whole into portals, business software and industrial operations.",
+    "tour.catalyst": "Understand intent, select capabilities, coordinate agents and return execution results to the current workspace.",
+    "tour.reactorLead": "Turn intelligent decisions into controlled action. REACTOR serves equipment, systems and operations, generating and running policies after objectives, constraints and safety bounds are explicit.",
+    "tour.reactorP1Title": "Understand operations", "tour.reactorP1Desc": "Map equipment, objects, state and controllable variables.",
+    "tour.reactorP2Title": "Validate policies", "tour.reactorP2Desc": "Define objectives and constraints, then simulate and safety-check before running.",
+    "tour.reactorP3Title": "Close the loop", "tour.reactorP3Desc": "Return operating state and outcomes to the Runtime for the next reaction cycle."
   }
 };
 
@@ -119,7 +147,34 @@ function setLanguage(lang) {
 function initDialog() {
   const dialog = document.getElementById('valenceDialog');
   const close = document.getElementById('dialogClose');
+  const track = document.getElementById('dialogTrack');
+  const viewport = document.getElementById('dialogViewport');
+  const slides = [...dialog.querySelectorAll('.dialog-slide')];
+  const dots = [...dialog.querySelectorAll('[data-page]')];
+  const prev = document.getElementById('dialogPrev');
+  const next = document.getElementById('dialogNext');
+  const count = document.getElementById('dialogCount');
+  const demo = document.getElementById('demoStart');
+  let page = 0;
+  let touchStartX = 0;
+  let touchStartY = 0;
+
+  const goTo = (index) => {
+    page = Math.max(0, Math.min(slides.length - 1, index));
+    track.style.transform = `translateX(-${page * 100}%)`;
+    slides.forEach((slide, i) => {
+      slide.classList.toggle('is-active', i === page);
+      slide.setAttribute('aria-hidden', String(i !== page));
+      if (i === page) slide.scrollTop = 0;
+    });
+    dots.forEach((dot, i) => dot.classList.toggle('active', i === page));
+    prev.disabled = page === 0;
+    next.disabled = page === slides.length - 1;
+    count.textContent = `${String(page + 1).padStart(2, '0')} / ${String(slides.length).padStart(2, '0')}`;
+  };
+
   const open = () => {
+    goTo(0);
     if (!dialog.open) dialog.showModal();
     document.body.classList.add('modal-open');
   };
@@ -127,14 +182,33 @@ function initDialog() {
     if (dialog.open) dialog.close();
     document.body.classList.remove('modal-open');
   };
+
   document.querySelectorAll('.modal-trigger').forEach((button) => button.addEventListener('click', open));
   close.addEventListener('click', shut);
+  demo.addEventListener('click', () => goTo(1));
+  prev.addEventListener('click', () => goTo(page - 1));
+  next.addEventListener('click', () => goTo(page + 1));
+  dots.forEach((dot) => dot.addEventListener('click', () => goTo(Number(dot.dataset.page))));
+
+  viewport.addEventListener('touchstart', (event) => {
+    touchStartX = event.changedTouches[0].clientX;
+    touchStartY = event.changedTouches[0].clientY;
+  }, { passive: true });
+  viewport.addEventListener('touchend', (event) => {
+    const dx = event.changedTouches[0].clientX - touchStartX;
+    const dy = event.changedTouches[0].clientY - touchStartY;
+    if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy)) goTo(page + (dx < 0 ? 1 : -1));
+  }, { passive: true });
+
+  dialog.addEventListener('keydown', (event) => {
+    if (event.key === 'ArrowLeft') goTo(page - 1);
+    if (event.key === 'ArrowRight') goTo(page + 1);
+  });
   dialog.addEventListener('click', (event) => {
-    const box = dialog.getBoundingClientRect();
-    const inside = event.clientX >= box.left && event.clientX <= box.right && event.clientY >= box.top && event.clientY <= box.bottom;
-    if (!inside) shut();
+    if (event.target === dialog) shut();
   });
   dialog.addEventListener('close', () => document.body.classList.remove('modal-open'));
+  goTo(0);
 }
 
 function initNavigation() {

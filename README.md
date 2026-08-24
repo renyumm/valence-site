@@ -9,7 +9,7 @@ VALENCE 三产品体系官方展示站。
 - **Catalyst · Chief Orchestrator**：VALENCE 内部的 AI 协调者，不是第四款产品；负责理解、协调、委派与汇总。
 - **REACTOR · Control & Feedback**：把智能决策转化为经过约束与安全校验的控制策略，并回传执行反馈。
 
-三款产品共享同一 Runtime，可单独购买，也可自由组合为 `ION → VALENCE → REACTOR` 的完整反应链。ION、REACTOR 和第三方能力可作为插件接入 VALENCE；VALENCE 也可整体作为 API 接入其他系统。
+三款产品共享同一 Runtime，可单独部署，也可自由组合为 `ION → VALENCE → REACTOR` 的完整反应链。ION、REACTOR 和第三方能力可作为插件接入 VALENCE；VALENCE 也可整体作为 API 接入其他系统。
 
 ## 本地预览
 
