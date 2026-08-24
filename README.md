@@ -19,6 +19,12 @@ python3 -m http.server 8080
 
 访问 `http://127.0.0.1:8080`。追加 `?lang=en` 可直接预览英文页面。
 
+## 宣传册与联系表单
+
+- `assets/brochure/` 保存宣传册 PDF 及 7 张逐页网页图。
+- 联系表单通过 FormSubmit AJAX 投递至 `strrenyumm@gmail.com`。
+- 首次上线需在收件邮箱中点击 FormSubmit 的 **Activate Form** 链接，之后访客消息才会正常转发。
+
 ## 容器部署
 
 ```bash

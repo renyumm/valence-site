@@ -59,7 +59,14 @@ const i18n = {
     "tour.reactorLead": "把智能决策转化为受控行动。REACTOR 面向设备、系统与现场控制，在明确目标、约束和安全边界后生成并运行策略。",
     "tour.reactorP1Title": "理解现场", "tour.reactorP1Desc": "映射设备、对象、状态与可控变量。",
     "tour.reactorP2Title": "验证策略", "tour.reactorP2Desc": "建立目标和约束，经过仿真与安全校验后再运行。",
-    "tour.reactorP3Title": "形成闭环", "tour.reactorP3Desc": "把执行状态与效果反馈送回 Runtime，进入下一轮反应。"
+    "tour.reactorP3Title": "形成闭环", "tour.reactorP3Desc": "把执行状态与效果反馈送回 Runtime，进入下一轮反应。",
+    "brochure.openPdf": "打开 PDF ↗",
+    "contact.title": "与 VALENCE 团队联系", "contact.lead": "留下你的联系方式与需求，我们会通过邮件回复。",
+    "contact.name": "姓名", "contact.namePlaceholder": "如何称呼你",
+    "contact.email": "邮箱", "contact.emailPlaceholder": "you@company.com",
+    "contact.company": "公司 / 团队", "contact.companyPlaceholder": "选填",
+    "contact.message": "希望了解什么？", "contact.messagePlaceholder": "告诉我们你的业务场景、希望部署的产品或合作方式",
+    "contact.submit": "发送消息", "contact.sending": "发送中…", "contact.success": "发送成功，我们会尽快回复。", "contact.error": "发送失败，请稍后重试。"
   },
 
   en: {
@@ -122,7 +129,14 @@ const i18n = {
     "tour.reactorLead": "Turn intelligent decisions into controlled action. REACTOR serves equipment, systems and operations, generating and running policies after objectives, constraints and safety bounds are explicit.",
     "tour.reactorP1Title": "Understand operations", "tour.reactorP1Desc": "Map equipment, objects, state and controllable variables.",
     "tour.reactorP2Title": "Validate policies", "tour.reactorP2Desc": "Define objectives and constraints, then simulate and safety-check before running.",
-    "tour.reactorP3Title": "Close the loop", "tour.reactorP3Desc": "Return operating state and outcomes to the Runtime for the next reaction cycle."
+    "tour.reactorP3Title": "Close the loop", "tour.reactorP3Desc": "Return operating state and outcomes to the Runtime for the next reaction cycle.",
+    "brochure.openPdf": "Open PDF ↗",
+    "contact.title": "Contact the VALENCE team", "contact.lead": "Leave your contact details and requirements. We will reply by email.",
+    "contact.name": "Name", "contact.namePlaceholder": "How should we address you?",
+    "contact.email": "Email", "contact.emailPlaceholder": "you@company.com",
+    "contact.company": "Company / team", "contact.companyPlaceholder": "Optional",
+    "contact.message": "What would you like to explore?", "contact.messagePlaceholder": "Tell us about your use case, products to deploy or partnership idea",
+    "contact.submit": "Send message", "contact.sending": "Sending…", "contact.success": "Message sent. We will reply soon.", "contact.error": "Could not send. Please try again later."
   }
 };
 
@@ -139,6 +153,10 @@ function setLanguage(lang) {
     if (value.includes('<')) el.innerHTML = value;
     else el.textContent = value;
   });
+  document.querySelectorAll('[data-i18n-placeholder]').forEach((el) => {
+    const value = i18n[currentLang][el.dataset.i18nPlaceholder];
+    if (value) el.placeholder = value;
+  });
   document.getElementById('langZh').classList.toggle('active', currentLang === 'zh');
   document.getElementById('langEn').classList.toggle('active', currentLang === 'en');
   document.title = currentLang === 'zh' ? 'VALENCE — 从数据到智能再到控制' : 'VALENCE — From Data to Intelligence to Control';
@@ -154,7 +172,6 @@ function initDialog() {
   const prev = document.getElementById('dialogPrev');
   const next = document.getElementById('dialogNext');
   const count = document.getElementById('dialogCount');
-  const demo = document.getElementById('demoStart');
   let page = 0;
   let touchStartX = 0;
   let touchStartY = 0;
@@ -188,7 +205,6 @@ function initDialog() {
 
   document.querySelectorAll('.modal-trigger').forEach((button) => button.addEventListener('click', open));
   close.addEventListener('click', shut);
-  demo.addEventListener('click', () => goTo(1));
   prev.addEventListener('click', () => goTo(page - 1));
   next.addEventListener('click', () => goTo(page + 1));
   dots.forEach((dot) => dot.addEventListener('click', () => goTo(Number(dot.dataset.page))));
@@ -230,6 +246,59 @@ function initDialog() {
   goTo(0);
 }
 
+function initContactDialog() {
+  const dialog = document.getElementById('contactDialog');
+  const close = document.getElementById('contactClose');
+  const form = document.getElementById('contactForm');
+  const submit = document.getElementById('contactSubmit');
+  const status = document.getElementById('contactStatus');
+
+  const open = () => {
+    status.textContent = '';
+    if (!dialog.open) dialog.showModal();
+    document.body.classList.add('modal-open');
+  };
+  const shut = () => {
+    if (dialog.open) dialog.close();
+    document.body.classList.remove('modal-open');
+  };
+
+  document.querySelectorAll('.contact-trigger').forEach((button) => button.addEventListener('click', open));
+  close.addEventListener('click', shut);
+  dialog.addEventListener('click', (event) => {
+    if (event.target === dialog) shut();
+  });
+  dialog.addEventListener('close', () => document.body.classList.remove('modal-open'));
+
+  form.addEventListener('submit', async (event) => {
+    event.preventDefault();
+    if (!form.reportValidity()) return;
+    submit.disabled = true;
+    status.className = 'form-status';
+    status.textContent = i18n[currentLang]['contact.sending'];
+    try {
+      const response = await fetch('https://formsubmit.co/ajax/strrenyumm@gmail.com', {
+        method: 'POST',
+        headers: { Accept: 'application/json' },
+        body: new FormData(form)
+      });
+      const result = await response.json();
+      if (!response.ok || result.success === false || result.success === 'false') {
+        throw new Error(result.message || `Contact request failed: ${response.status}`);
+      }
+      status.classList.add('success');
+      status.textContent = i18n[currentLang]['contact.success'];
+      form.reset();
+    } catch (error) {
+      console.error(error);
+      status.classList.add('error');
+      status.textContent = i18n[currentLang]['contact.error'];
+    } finally {
+      submit.disabled = false;
+    }
+  });
+}
+
 function initNavigation() {
   const toggle = document.getElementById('mobileToggle');
   const links = document.getElementById('navLinks');
@@ -266,6 +335,7 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('langEn').addEventListener('click', () => setLanguage('en'));
   setLanguage(currentLang);
   initDialog();
+  initContactDialog();
   initNavigation();
 
   if ('IntersectionObserver' in window) {

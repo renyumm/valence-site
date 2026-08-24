@@ -21,7 +21,7 @@
     .runtime-node img { width: 82px; height: 82px; object-fit: contain; }
     .footer-brand img, .dialog-brand img { width: 50px; height: 50px; object-fit: contain; }
   </style>
-  <link rel="stylesheet" href="styles.css?v=20260825-5" />
+  <link rel="stylesheet" href="styles.css?v=20260825-6" />
 </head>
 <body>
   <div class="noise" aria-hidden="true"></div>
@@ -201,8 +201,7 @@
           <div class="system-list right"><span>VALENCE API</span><span>PORTAL / APP</span><span>MES / ERP / BA</span></div>
         </div>
         <div class="integration-actions">
-          <button class="btn primary modal-trigger" type="button" data-i18n="integration.cta">了解 Valence</button>
-          <a class="btn ghost" href="mailto:strrenyumm@gmail.com?subject=VALENCE%20Website%20Inquiry" aria-label="发送邮件至 VALENCE">hello@valence.chat</a>
+          <button class="btn ghost contact-trigger" type="button">hello@valence.chat</button>
         </div>
       </div>
     </section>
@@ -214,72 +213,67 @@
     <div class="footer-bottom"><span>© 2026 VALENCE</span><span>Enterprise Intelligence Runtime</span></div>
   </footer>
 
-  <dialog class="valence-dialog" id="valenceDialog" aria-labelledby="dialogTitle">
-    <div class="dialog-panel">
+  <dialog class="valence-dialog" id="valenceDialog" aria-label="VALENCE 宣传册">
+    <div class="dialog-panel brochure-panel">
       <button class="dialog-close" id="dialogClose" type="button" aria-label="关闭">×</button>
-      <div class="dialog-brand"><img src="assets/logos/Valence.png" alt=""><span>VALENCE · PRODUCT TOUR</span></div>
+      <div class="dialog-brand">
+        <img src="assets/logos/Valence.png" alt=""><span>VALENCE · BROCHURE</span>
+        <a class="brochure-pdf-link" href="assets/brochure/VALENCE-brochure.pdf" target="_blank" rel="noopener" data-i18n="brochure.openPdf">打开 PDF ↗</a>
+      </div>
 
-      <div class="dialog-viewport" id="dialogViewport">
+      <div class="dialog-viewport brochure-viewport" id="dialogViewport">
         <div class="dialog-track" id="dialogTrack">
-          <section class="dialog-slide is-active" data-slide="0">
-            <div class="eyebrow" data-i18n="modal.eyebrow">ABOUT VALENCE</div>
-            <h2 id="dialogTitle" data-i18n="modal.title">三产品体系中的 AI 中枢</h2>
-            <p class="dialog-lead" data-i18n="modal.lead">VALENCE 位于 ION 数据与 REACTOR 控制之间。它让数据进入 Agent 与任务的协作过程，再把形成的决策送往控制与执行；Catalyst 是其中负责协调这场“反应”的 AI 角色。</p>
-            <div class="dialog-grid">
-              <article><span>01</span><h3 data-i18n="modal.m1Title">核心中枢</h3><p data-i18n="modal.m1Desc">连接上下文、Agent、任务与自动化，让复杂工作持续推进。</p></article>
-              <article><span>02</span><h3 data-i18n="modal.m2Title">插件容器</h3><p data-i18n="modal.m2Desc">ION、REACTOR 与第三方产品都能作为插件进入，扩展 VALENCE 的能力边界。</p></article>
-              <article><span>03</span><h3 data-i18n="modal.m3Title">API 能力</h3><p data-i18n="modal.m3Desc">VALENCE 也能整体作为 API，将协调、任务与执行能力提供给其他系统。</p></article>
-            </div>
-            <div class="dialog-actions"><button class="btn primary" id="demoStart" type="button" data-i18n="modal.demo">展示 Demo</button><a class="text-link" href="https://github.com/renyumm" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div>
-          </section>
-
-          <section class="dialog-slide product-slide" data-slide="1" aria-hidden="true">
-            <div class="slide-product-head"><img src="assets/logos/Ion.png" alt="ION logo"><div><span>01 · DATA INTELLIGENCE</span><h2>ION</h2></div></div>
-            <p class="dialog-lead" data-i18n="tour.ionLead">让业务人员像提问一样使用数据。ION 连接数据库、指标与领域数据，把分散信息整理成可理解、可追溯、可被 AI 调用的数据语义。</p>
-            <div class="tour-points">
-              <article><b data-i18n="tour.ionP1Title">连接数据</b><p data-i18n="tour.ionP1Desc">接入企业数据库与业务数据源，统一字段、指标与口径。</p></article>
-              <article><b data-i18n="tour.ionP2Title">理解数据</b><p data-i18n="tour.ionP2Desc">通过自然语言问数、下钻和趋势分析，让数据直接服务业务判断。</p></article>
-              <article><b data-i18n="tour.ionP3Title">开放数据能力</b><p data-i18n="tour.ionP3Desc">可独立部署，也可作为数据插件进入 VALENCE。</p></article>
-            </div>
-          </section>
-
-          <section class="dialog-slide product-slide" data-slide="2" aria-hidden="true">
-            <div class="slide-product-head"><img src="assets/logos/Valence.png" alt="VALENCE logo"><div><span>02 · ENTERPRISE INTELLIGENCE</span><h2>VALENCE</h2></div></div>
-            <p class="dialog-lead" data-i18n="tour.valenceLead">让 Agent、任务和自动化留在同一个业务现场。主对话持续，后台任务持续推进，过程与结果始终回到原来的上下文。</p>
-            <div class="tour-points">
-              <article><b data-i18n="tour.valenceP1Title">共享上下文</b><p data-i18n="tour.valenceP1Desc">多人、多 Agent 与任务在同一 Pod 中连续协作。</p></article>
-              <article><b data-i18n="tour.valenceP2Title">可扩展 Runtime</b><p data-i18n="tour.valenceP2Desc">ION、REACTOR、Agent 与第三方产品都能作为插件接入。</p></article>
-              <article><b data-i18n="tour.valenceP3Title">系统级 API</b><p data-i18n="tour.valenceP3Desc">VALENCE 可以整体嵌入门户、业务系统和工业现场。</p></article>
-            </div>
-            <div class="tour-catalyst"><img src="assets/logos/catalyst-mark.webp" alt="Catalyst logo"><div><span>CATALYST · AI COORDINATOR</span><p data-i18n="tour.catalyst">理解意图、选择能力、协调 Agent，并将执行结果汇总回当前现场。</p></div></div>
-          </section>
-
-          <section class="dialog-slide product-slide" data-slide="3" aria-hidden="true">
-            <div class="slide-product-head"><img src="assets/logos/Reactor.png" alt="REACTOR logo"><div><span>03 · CONTROL & FEEDBACK</span><h2>REACTOR</h2></div></div>
-            <p class="dialog-lead" data-i18n="tour.reactorLead">把智能决策转化为受控行动。REACTOR 面向设备、系统与现场控制，在明确目标、约束和安全边界后生成并运行策略。</p>
-            <div class="tour-points">
-              <article><b data-i18n="tour.reactorP1Title">理解现场</b><p data-i18n="tour.reactorP1Desc">映射设备、对象、状态与可控变量。</p></article>
-              <article><b data-i18n="tour.reactorP2Title">验证策略</b><p data-i18n="tour.reactorP2Desc">建立目标和约束，经过仿真与安全校验后再运行。</p></article>
-              <article><b data-i18n="tour.reactorP3Title">形成闭环</b><p data-i18n="tour.reactorP3Desc">把执行状态与效果反馈送回 Runtime，进入下一轮反应。</p></article>
-            </div>
-          </section>
+          <section class="dialog-slide brochure-slide is-active" data-slide="0"><a href="assets/brochure/page-1.jpg" target="_blank" rel="noopener"><img src="assets/brochure/page-1.jpg" alt="VALENCE 宣传册第 1 页"></a></section>
+          <section class="dialog-slide brochure-slide" data-slide="1" aria-hidden="true"><a href="assets/brochure/page-2.jpg" target="_blank" rel="noopener"><img src="assets/brochure/page-2.jpg" alt="VALENCE 宣传册第 2 页" loading="lazy"></a></section>
+          <section class="dialog-slide brochure-slide" data-slide="2" aria-hidden="true"><a href="assets/brochure/page-3.jpg" target="_blank" rel="noopener"><img src="assets/brochure/page-3.jpg" alt="VALENCE 宣传册第 3 页" loading="lazy"></a></section>
+          <section class="dialog-slide brochure-slide" data-slide="3" aria-hidden="true"><a href="assets/brochure/page-4.jpg" target="_blank" rel="noopener"><img src="assets/brochure/page-4.jpg" alt="VALENCE 宣传册第 4 页" loading="lazy"></a></section>
+          <section class="dialog-slide brochure-slide" data-slide="4" aria-hidden="true"><a href="assets/brochure/page-5.jpg" target="_blank" rel="noopener"><img src="assets/brochure/page-5.jpg" alt="VALENCE 宣传册第 5 页" loading="lazy"></a></section>
+          <section class="dialog-slide brochure-slide" data-slide="5" aria-hidden="true"><a href="assets/brochure/page-6.jpg" target="_blank" rel="noopener"><img src="assets/brochure/page-6.jpg" alt="VALENCE 宣传册第 6 页" loading="lazy"></a></section>
+          <section class="dialog-slide brochure-slide" data-slide="6" aria-hidden="true"><a href="assets/brochure/page-7.jpg" target="_blank" rel="noopener"><img src="assets/brochure/page-7.jpg" alt="VALENCE 宣传册第 7 页" loading="lazy"></a></section>
         </div>
       </div>
 
-      <nav class="dialog-pager" aria-label="产品导览分页">
+      <nav class="dialog-pager" aria-label="宣传册分页">
         <button class="pager-arrow" id="dialogPrev" type="button" aria-label="上一页">←</button>
         <div class="pager-dots" id="dialogDots">
-          <button class="active" type="button" data-page="0" aria-label="总览"></button>
-          <button type="button" data-page="1" aria-label="ION"></button>
-          <button type="button" data-page="2" aria-label="VALENCE"></button>
-          <button type="button" data-page="3" aria-label="REACTOR"></button>
+          <button class="active" type="button" data-page="0" aria-label="第 1 页"></button>
+          <button type="button" data-page="1" aria-label="第 2 页"></button>
+          <button type="button" data-page="2" aria-label="第 3 页"></button>
+          <button type="button" data-page="3" aria-label="第 4 页"></button>
+          <button type="button" data-page="4" aria-label="第 5 页"></button>
+          <button type="button" data-page="5" aria-label="第 6 页"></button>
+          <button type="button" data-page="6" aria-label="第 7 页"></button>
         </div>
-        <span class="pager-count" id="dialogCount">01 / 04</span>
+        <span class="pager-count" id="dialogCount">01 / 07</span>
         <button class="pager-arrow" id="dialogNext" type="button" aria-label="下一页">→</button>
       </nav>
     </div>
   </dialog>
 
-  <script src="script.js?v=20260825-5"></script>
+  <dialog class="contact-dialog" id="contactDialog" aria-labelledby="contactTitle">
+    <div class="contact-panel">
+      <button class="dialog-close" id="contactClose" type="button" aria-label="关闭">×</button>
+      <div class="eyebrow">HELLO@VALENCE.CHAT</div>
+      <h2 id="contactTitle" data-i18n="contact.title">与 VALENCE 团队联系</h2>
+      <p data-i18n="contact.lead">留下你的联系方式与需求，我们会通过邮件回复。</p>
+      <form id="contactForm" action="https://formsubmit.co/strrenyumm@gmail.com" method="POST">
+        <input type="text" name="_honey" class="form-honey" tabindex="-1" autocomplete="off">
+        <input type="hidden" name="_subject" value="VALENCE Website Inquiry">
+        <input type="hidden" name="_template" value="table">
+        <div class="form-grid">
+          <label><span data-i18n="contact.name">姓名</span><input name="name" type="text" required autocomplete="name" data-i18n-placeholder="contact.namePlaceholder" placeholder="如何称呼你"></label>
+          <label><span data-i18n="contact.email">邮箱</span><input name="email" type="email" required autocomplete="email" data-i18n-placeholder="contact.emailPlaceholder" placeholder="you@company.com"></label>
+        </div>
+        <label><span data-i18n="contact.company">公司 / 团队</span><input name="company" type="text" autocomplete="organization" data-i18n-placeholder="contact.companyPlaceholder" placeholder="选填"></label>
+        <label><span data-i18n="contact.message">希望了解什么？</span><textarea name="message" rows="5" required data-i18n-placeholder="contact.messagePlaceholder" placeholder="告诉我们你的业务场景、希望部署的产品或合作方式"></textarea></label>
+        <div class="contact-submit-row">
+          <button class="btn primary" id="contactSubmit" type="submit" data-i18n="contact.submit">发送消息</button>
+          <span class="form-status" id="contactStatus" role="status" aria-live="polite"></span>
+        </div>
+      </form>
+    </div>
+  </dialog>
+
+  <script src="script.js?v=20260825-6"></script>
 </body>
 </html>
