@@ -4,8 +4,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#050b14" />
-  <meta name="description" content="VALENCE 是可扩展的企业智能 Runtime：以 Catalyst 协调 Agent、专家与 Skill，并让 ION 本体能力和 Reactor 运筹建模能力按插件接入。" />
-  <title>VALENCE — Enterprise Intelligence Runtime</title>
+  <meta name="description" content="ION 数据、VALENCE 智能中枢、REACTOR 控制：三款独立产品共享一套 Runtime，可单独购买、自由组合，并通过插件与 API 接入现有系统。" />
+  <title>VALENCE — 从数据到智能再到控制</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -13,13 +13,15 @@
     /* Critical sizing: prevents raw logo artwork from expanding if external CSS is stale or delayed. */
     img { max-width: 100%; height: auto; }
     .brand img { width: 42px; height: 42px; object-fit: cover; }
-    .runtime-core img, .plugin-card img { width: 112px; height: 112px; object-fit: cover; }
+    .reaction-catalyst img { width: 52px; height: 52px; object-fit: cover; }
+    .reaction-node img { width: 82px; height: 82px; object-fit: cover; }
+    .runtime-product img { width: 76px; height: 76px; object-fit: cover; }
     .catalyst-strip img { width: 72px; height: 72px; object-fit: cover; }
     .product-top img { width: 84px; height: 84px; object-fit: cover; }
     .runtime-node img { width: 82px; height: 82px; object-fit: cover; }
     .footer-brand img, .dialog-brand img { width: 50px; height: 50px; object-fit: cover; }
   </style>
-  <link rel="stylesheet" href="styles.css?v=20260825-2" />
+  <link rel="stylesheet" href="styles.css?v=20260825-3" />
 </head>
 <body>
   <div class="noise" aria-hidden="true"></div>
@@ -56,8 +58,8 @@
     <section class="hero shell">
       <div class="hero-copy reveal">
         <div class="eyebrow" data-i18n="hero.eyebrow">ENTERPRISE INTELLIGENCE RUNTIME</div>
-        <h1 data-i18n="hero.title">让专家、Agent 与系统<br><span class="gradient-text">在同一运行时协同。</span></h1>
-        <p class="lead" data-i18n="hero.lead">VALENCE 以 Catalyst 为调度中枢，把对话、任务、专家、Skill 与自动化连接成持续运行的工作现场；ION 与 Reactor 作为专业插件接入，也可通过开放接口嵌入现有系统。</p>
+        <h1 data-i18n="hero.title">从数据，到智能，<br><span class="gradient-text">再到控制。</span></h1>
+        <p class="lead" data-i18n="hero.lead">ION 让工业数据成为可用的原子；Catalyst 在 VALENCE 中协调 AI、专家与 Skill，促成信息重组；REACTOR 将新的决策结构转化为受控行动。三款产品共享同一 Runtime，可单独使用，也可组合成完整反应链。</p>
         <div class="hero-actions">
           <a class="btn primary" href="#runtime">
             <span data-i18n="hero.ctaPrimary">查看统一 Runtime</span>
@@ -66,91 +68,107 @@
           <button class="btn ghost modal-trigger" type="button" data-i18n="hero.ctaSecondary">了解 Valence</button>
         </div>
         <div class="hero-tags" aria-label="产品特性">
-          <span data-i18n="tags.runtime">统一运行时</span>
-          <span data-i18n="tags.plugins">可插拔专业能力</span>
-          <span data-i18n="tags.open">开放接口</span>
+          <span data-i18n="tags.runtime">三款独立产品</span>
+          <span data-i18n="tags.plugins">按需组合购买</span>
+          <span data-i18n="tags.open">插件与 API 双向开放</span>
         </div>
       </div>
 
       <div class="hero-visual reveal">
-        <div class="hero-art glass-panel">
-          <img src="assets/logos/story2.webp" alt="VALENCE、ION、Catalyst 与 Reactor 组成的统一能力网络" />
-          <div class="hero-art-caption">
-            <span data-i18n="hero.visualLabel">ONE RUNTIME</span>
-            <strong data-i18n="hero.visualText">能力可组合，过程可追踪，结果回到同一现场</strong>
+        <div class="reaction-vessel glass-panel" role="img" aria-label="ION 数据经过 Catalyst 协调，在 VALENCE 中形成智能，再由 REACTOR 转化为控制">
+          <div class="vessel-head"><span>UNIFIED RUNTIME</span><b>DATA → AI → CONTROL</b></div>
+          <svg class="vessel-outline" viewBox="0 0 640 390" aria-hidden="true">
+            <path d="M74 54v72c0 42 18 80 50 106l126 100c41 33 99 33 140 0l126-100c32-26 50-64 50-106V54"/>
+            <path class="vessel-liquid" d="M104 224c82-34 133 32 215 0s133 34 217 0v-98c0 32-14 62-39 82L371 308c-30 24-73 24-103 0L142 208c-24-20-38-50-38-82z"/>
+          </svg>
+          <div class="reaction-catalyst">
+            <img src="assets/logos/catalyst-mark.webp" alt="Catalyst logo"><span>CATALYST</span><small data-i18n="hero.catalystRole">AI 协调与催化</small>
           </div>
+          <div class="reaction-flow">
+            <article class="reaction-node node-data"><img src="assets/logos/ion-mark.webp" alt="ION logo"><span>ION</span><small data-i18n="hero.ionRole">数据原子</small></article>
+            <div class="reaction-arrow"><i></i><span>DATA</span></div>
+            <article class="reaction-node node-ai"><img src="assets/logos/valence-mark.webp" alt="VALENCE logo"><span>VALENCE</span><small data-i18n="hero.valenceRole">AI 中枢</small></article>
+            <div class="reaction-arrow"><i></i><span>ACTION</span></div>
+            <article class="reaction-node node-control"><img src="assets/logos/reactor-mark.webp" alt="Reactor logo"><span>REACTOR</span><small data-i18n="hero.reactorRole">工业控制</small></article>
+          </div>
+          <div class="reaction-equation" data-i18n="hero.visualText">离子化数据，在 Catalyst 作用下改变连接方式，由 VALENCE 形成新智能，再由 REACTOR 作用于现场。</div>
         </div>
       </div>
     </section>
 
     <section id="runtime" class="section shell">
       <div class="section-head reveal">
-        <div class="eyebrow" data-i18n="runtime.eyebrow">ONE RUNTIME · THREE CAPABILITY LAYERS</div>
-        <h2 data-i18n="runtime.title">不是四套孤立产品，而是一套完整运行时。</h2>
-        <p class="subtitle" data-i18n="runtime.subtitle">VALENCE 承载协作、上下文与任务生命周期；ION 提供可治理的企业本体与语义资产；Reactor 把业务目标转化为约束、模型与可执行方案。</p>
+        <div class="eyebrow" data-i18n="runtime.eyebrow">THREE PRODUCTS · ONE RUNTIME</div>
+        <h2 data-i18n="runtime.title">三款产品，可以单买，也可以组合成完整反应链。</h2>
+        <p class="subtitle" data-i18n="runtime.subtitle">ION、VALENCE 与 REACTOR 都是可独立交付的产品，并共享一致的 Runtime。客户可以从一个问题开始，随后按业务需要增加第二款或第三款产品，而不必推倒重来。</p>
       </div>
 
-      <div class="runtime-map reveal">
-        <article class="runtime-core glass-panel">
-          <img src="assets/logos/valence-mark.webp" alt="VALENCE logo" />
-          <div>
-            <span class="card-kicker">CORE RUNTIME</span>
-            <h3>VALENCE</h3>
-            <p data-i18n="runtime.valence">统一管理 Pod 上下文、Agent、专家、Skill、任务板、自动化与运行结果，让一次请求可以跨越多轮协作持续推进。</p>
-          </div>
-        </article>
-        <div class="runtime-rail" aria-hidden="true"><span></span><b>PLUGIN / API</b><span></span></div>
-        <div class="runtime-plugins">
-          <article class="plugin-card ion-accent">
-            <img src="assets/logos/ion-mark.webp" alt="ION logo" />
-            <div><span>ONTOLOGY PLUGIN</span><h3>ION</h3><p data-i18n="runtime.ion">把标准字段、指标口径、领域知识与分析 Skill 组织为版本化本体资产，为每次问数保留口径、字段与血缘证据。</p></div>
-          </article>
-          <article class="plugin-card reactor-accent">
-            <img src="assets/logos/reactor-mark.webp" alt="Reactor logo" />
-            <div><span>OR MODELING PLUGIN</span><h3>REACTOR</h3><p data-i18n="runtime.reactor">把对象、目标、约束与策略装配为运筹模型，在安全边界内完成仿真、求解、校验与执行反馈。</p></div>
-          </article>
-        </div>
-        <article class="catalyst-strip">
-          <img src="assets/logos/catalyst-mark.webp" alt="Catalyst logo" />
-          <div><span>CHIEF AI AGENT</span><h3>CATALYST</h3></div>
-          <p data-i18n="runtime.catalyst">理解意图、发现能力、动态委派专家，并持续协调复杂任务从请求走向完成。</p>
-          <div class="flow-steps" data-i18n="runtime.flow">理解 → 委派 → 跟踪 → 汇总 → 交付</div>
-        </article>
+      <div class="purchase-modes reveal">
+        <article><span>01</span><b data-i18n="runtime.buyOneTitle">单产品</b><p data-i18n="runtime.buyOneDesc">只购买当前最需要的数据、AI 或控制能力。</p></article>
+        <article><span>02</span><b data-i18n="runtime.buyTwoTitle">自由组合</b><p data-i18n="runtime.buyTwoDesc">任意两款产品共享上下文、接口与运行结果。</p></article>
+        <article><span>03</span><b data-i18n="runtime.buyAllTitle">完整反应链</b><p data-i18n="runtime.buyAllDesc">ION → VALENCE → REACTOR 贯通数据、AI 与控制。</p></article>
       </div>
+
+      <div class="runtime-products reveal">
+        <article class="runtime-product ion-accent"><img src="assets/logos/ion-mark.webp" alt="ION logo"><span>DATA PRODUCT</span><h3>ION</h3><p data-i18n="runtime.ion">连接、治理并理解企业数据，让数据成为可被 AI 调用的高活性“离子”。</p></article>
+        <article class="runtime-product valence-core"><div class="core-badge">CORE</div><img src="assets/logos/valence-mark.webp" alt="VALENCE logo"><span>AI PRODUCT</span><h3>VALENCE</h3><p data-i18n="runtime.valence">作为智能中枢连接人、Agent、专家、Skill 与任务。Catalyst 在其中负责理解、协调、委派与汇总。</p></article>
+        <article class="runtime-product reactor-accent"><img src="assets/logos/reactor-mark.webp" alt="Reactor logo"><span>CONTROL PRODUCT</span><h3>REACTOR</h3><p data-i18n="runtime.reactor">把智能决策转化为可验证、受约束的控制策略，并将现场反馈送回 Runtime。</p></article>
+      </div>
+
+      <article class="catalyst-strip reveal">
+        <img src="assets/logos/catalyst-mark.webp" alt="Catalyst logo" />
+        <div><span>AI COORDINATOR · INSIDE VALENCE</span><h3>CATALYST</h3></div>
+        <p data-i18n="runtime.catalyst">Catalyst 不是第四款产品，而是 VALENCE 的 AI 协调者：它发现可用能力，选择 Agent 与 Skill，并让任务持续向结果推进。</p>
+        <div class="flow-steps" data-i18n="runtime.flow">理解 → 协调 → 委派 → 汇总</div>
+      </article>
     </section>
 
     <section id="products" class="section shell">
       <div class="section-head reveal">
-        <div class="eyebrow" data-i18n="products.eyebrow">COMPOSABLE CAPABILITIES</div>
-        <h2 data-i18n="products.title">专业能力各自完整，组合后共享同一上下文。</h2>
-        <p class="subtitle" data-i18n="products.subtitle">ION 与 Reactor 可以独立部署，也能作为插件由 Catalyst 按任务动态调用；接入后，数据语义、建模过程与执行结果都留在 VALENCE 的工作现场。</p>
+        <div class="eyebrow" data-i18n="products.eyebrow">DATA · AI · CONTROL</div>
+        <h2 data-i18n="products.title">每款产品解决一个清晰问题。</h2>
+        <p class="subtitle" data-i18n="products.subtitle">ION 负责数据，VALENCE 负责智能协作，REACTOR 负责控制。边界清楚，所以能独立交付；Runtime 一致，所以能自然组合。</p>
       </div>
 
       <div class="product-grid">
         <article class="product-card reveal">
-          <div class="product-top"><img src="assets/logos/ion-mark.webp" alt="ION logo"><span>01 · ONTOLOGY</span></div>
+          <div class="product-top"><img src="assets/logos/ion-mark.webp" alt="ION logo"><span>01 · DATA</span></div>
           <h3>ION</h3>
-          <h4 data-i18n="products.ionSub">企业本体与可治理语义运行层</h4>
-          <p data-i18n="products.ionDesc">ION 不把数据库结构写进提示词，而是用领域包沉淀标准字段、指标、同义词与分析 Skill。物理数据源变化时，通过映射复用同一套业务语义。</p>
+          <h4 data-i18n="products.ionSub">让企业数据可连接、可理解、可追溯</h4>
+          <p data-i18n="products.ionDesc">ION 面向数据库、指标、报表与领域数据，把分散的信息整理成稳定的数据语义，并让业务人员和 AI 都能安全地调用。</p>
           <ul>
-            <li data-i18n="products.ionF1">领域包动态加载，业务知识与引擎解耦</li>
-            <li data-i18n="products.ionF2">版本化指标、语义空间与资产引用</li>
-            <li data-i18n="products.ionF3">受控问数、字段级血缘与运行审计</li>
-            <li data-i18n="products.ionF4">可作为 VALENCE Skill 或独立服务接入</li>
+            <li data-i18n="products.ionF1">连接企业数据库与业务数据源</li>
+            <li data-i18n="products.ionF2">统一字段、指标与领域语义</li>
+            <li data-i18n="products.ionF3">自然语言问数、下钻与分析</li>
+            <li data-i18n="products.ionF4">独立部署，或作为数据插件接入 VALENCE</li>
           </ul>
           <a class="text-link" href="https://github.com/renyumm/sq-bi" target="_blank" rel="noopener noreferrer">GitHub · ION <span>↗</span></a>
         </article>
 
-        <article class="product-card reveal">
-          <div class="product-top"><img src="assets/logos/reactor-mark.webp" alt="Reactor logo"><span>02 · OR MODELING</span></div>
-          <h3>REACTOR</h3>
-          <h4 data-i18n="products.reactorSub">运筹建模、仿真验证与策略运行层</h4>
-          <p data-i18n="products.reactorDesc">Reactor 用统一对象模型吸收不同项目的设备与业务结构，把主目标、约束条件和可控变量显式化，再完成仿真、优化与上线策略管理。</p>
+        <article class="product-card product-card-core reveal">
+          <div class="product-top"><img src="assets/logos/valence-mark.webp" alt="VALENCE logo"><span>02 · AI CORE</span></div>
+          <h3>VALENCE</h3>
+          <h4 data-i18n="products.valenceSub">连接人、AI 与专业能力的智能中枢</h4>
+          <p data-i18n="products.valenceDesc">VALENCE 让 Agent、专家、Skill、任务和自动化共享同一上下文。Catalyst 负责判断该调用谁、何时推进，以及如何把结果带回现场。</p>
           <ul>
-            <li data-i18n="products.reactorF1">对象映射复用同一套算法与模型框架</li>
-            <li data-i18n="products.reactorF2">目标函数、舒适约束与控制边界显式建模</li>
-            <li data-i18n="products.reactorF3">冷启动、在线校准与策略生命周期管理</li>
-            <li data-i18n="products.reactorF4">旁路接入现有 BA、PLC 或业务系统</li>
+            <li data-i18n="products.valenceF1">Catalyst 统一理解意图并协调执行</li>
+            <li data-i18n="products.valenceF2">Agent、专家、Skill 与任务持续协作</li>
+            <li data-i18n="products.valenceF3">ION、REACTOR 及第三方能力插件化接入</li>
+            <li data-i18n="products.valenceF4">自身可作为 API 嵌入其他系统</li>
+          </ul>
+          <button class="text-link modal-trigger" type="button" data-i18n="products.valenceLink">了解 VALENCE →</button>
+        </article>
+
+        <article class="product-card reveal">
+          <div class="product-top"><img src="assets/logos/reactor-mark.webp" alt="Reactor logo"><span>03 · CONTROL</span></div>
+          <h3>REACTOR</h3>
+          <h4 data-i18n="products.reactorSub">把智能决策转化为受控行动</h4>
+          <p data-i18n="products.reactorDesc">REACTOR 面向设备、系统与现场控制，在明确目标、约束和安全边界后生成并运行策略，让 AI 的判断真正作用于业务与物理世界。</p>
+          <ul>
+            <li data-i18n="products.reactorF1">映射设备、对象与可控变量</li>
+            <li data-i18n="products.reactorF2">建立目标、约束与控制策略</li>
+            <li data-i18n="products.reactorF3">仿真验证、上线运行与状态反馈</li>
+            <li data-i18n="products.reactorF4">独立部署，或作为控制插件接入 VALENCE</li>
           </ul>
           <a class="text-link" href="https://github.com/renyumm/horae" target="_blank" rel="noopener noreferrer">GitHub · Reactor <span>↗</span></a>
         </article>
@@ -159,13 +177,13 @@
 
     <section id="scenarios" class="section shell">
       <div class="section-head reveal">
-        <div class="eyebrow" data-i18n="scenarios.eyebrow">FROM REQUEST TO COMPLETION</div>
-        <h2 data-i18n="scenarios.title">同一 Runtime 覆盖三类关键工作。</h2>
+        <div class="eyebrow" data-i18n="scenarios.eyebrow">ONE REACTION CHAIN</div>
+        <h2 data-i18n="scenarios.title">工业智能沿着数据、AI、控制持续流动。</h2>
       </div>
       <div class="scenario-grid">
-        <article class="scenario-card reveal"><span>01</span><h3 data-i18n="scenarios.s1Title">企业问数与本体治理</h3><p data-i18n="scenarios.s1Desc">以 ION 的领域包和语义资产回答业务问题，支持指标下钻、趋势对比，并保留可审计的运行证据。</p></article>
-        <article class="scenario-card reveal"><span>02</span><h3 data-i18n="scenarios.s2Title">复杂任务与多专家协作</h3><p data-i18n="scenarios.s2Desc">Catalyst 在对话中分诊任务、委派专家、持续跟踪进度，并把不同执行结果汇总回当前 Pod。</p></article>
-        <article class="scenario-card reveal"><span>03</span><h3 data-i18n="scenarios.s3Title">运筹建模与策略运行</h3><p data-i18n="scenarios.s3Desc">Reactor 将目标和约束转为可验证模型，先仿真再上线，并让执行反馈进入下一轮分析与调度。</p></article>
+        <article class="scenario-card reveal"><span>01</span><h3 data-i18n="scenarios.s1Title">ION · 数据进入反应</h3><p data-i18n="scenarios.s1Desc">连接业务与工业数据，统一口径和语义，让原始信息成为可理解、可追溯、可调用的数据原子。</p></article>
+        <article class="scenario-card reveal"><span>02</span><h3 data-i18n="scenarios.s2Title">VALENCE · 智能重新成键</h3><p data-i18n="scenarios.s2Desc">Catalyst 协调 Agent、专家与 Skill，在共享上下文中分析信息、形成判断，并推动任务持续完成。</p></article>
+        <article class="scenario-card reveal"><span>03</span><h3 data-i18n="scenarios.s3Title">REACTOR · 决策作用现场</h3><p data-i18n="scenarios.s3Desc">把形成的决策转化为经过约束与安全校验的控制策略，再将执行反馈送回下一轮反应。</p></article>
       </div>
     </section>
 
@@ -173,15 +191,15 @@
       <div class="integration-box glass-panel reveal">
         <div>
           <div class="eyebrow" data-i18n="integration.eyebrow">OPEN BY DESIGN</div>
-          <h2 data-i18n="integration.title">向内接插件，向外接系统。</h2>
-          <p data-i18n="integration.lead">VALENCE 既能接入 ION、Reactor、OpenClaw、Codex、自定义 Agent、HTTP 服务与 MCP 工具，也能把对话、任务、自动化和专家编排能力开放给门户、业务系统与工业现场。</p>
+          <h2 data-i18n="integration.title">向内接插件，向外成为 API。</h2>
+          <p data-i18n="integration.lead">以 VALENCE 为核心，ION、REACTOR 和第三方产品都可以作为插件进入 Runtime，持续扩展数据、知识、模型与控制能力；同时，VALENCE 也可以整体化身为 API，把 AI 协作与任务执行能力提供给现有门户、业务系统和工业现场。</p>
         </div>
         <div class="integration-diagram" aria-label="开放接入架构">
-          <div class="system-list left"><span>ION</span><span>REACTOR</span><span>AGENT / SKILL</span></div>
+          <div class="system-list left"><span>ION · DATA</span><span>REACTOR · CONTROL</span><span>3RD-PARTY PLUGINS</span></div>
           <div class="connector" aria-hidden="true">→</div>
-          <div class="runtime-node"><img src="assets/logos/valence-mark.webp" alt=""><b>VALENCE</b><small>RUNTIME</small></div>
+          <div class="runtime-node"><img src="assets/logos/valence-mark.webp" alt=""><b>VALENCE</b><small>CORE RUNTIME</small></div>
           <div class="connector" aria-hidden="true">→</div>
-          <div class="system-list right"><span>MCP / HTTP</span><span>PORTAL / APP</span><span>MES / ERP / BA</span></div>
+          <div class="system-list right"><span>VALENCE API</span><span>PORTAL / APP</span><span>MES / ERP / BA</span></div>
         </div>
         <div class="integration-actions">
           <button class="btn primary modal-trigger" type="button" data-i18n="integration.cta">了解 Valence</button>
@@ -192,7 +210,7 @@
   </main>
 
   <footer class="footer shell">
-    <div class="footer-brand"><img src="assets/logos/valence-mark.webp" alt=""><div><b>VALENCE</b><p data-i18n="footer.desc">让专业能力在同一 Runtime 中持续协同。</p></div></div>
+    <div class="footer-brand"><img src="assets/logos/valence-mark.webp" alt=""><div><b>VALENCE</b><p data-i18n="footer.desc">三款产品，一套从数据到控制的 Runtime。</p></div></div>
     <div class="footer-links"><a href="#runtime" data-i18n="nav.runtime">统一 Runtime</a><span>·</span><a href="#products" data-i18n="nav.products">能力组件</a><span>·</span><a href="https://github.com/renyumm" target="_blank" rel="noopener noreferrer">GitHub</a></div>
     <div class="footer-bottom"><span>© 2026 VALENCE</span><span>Enterprise Intelligence Runtime</span></div>
   </footer>
@@ -202,17 +220,17 @@
       <button class="dialog-close" id="dialogClose" type="button" aria-label="关闭">×</button>
       <div class="dialog-brand"><img src="assets/logos/valence-mark.webp" alt=""><span>VALENCE</span></div>
       <div class="eyebrow" data-i18n="modal.eyebrow">ABOUT VALENCE</div>
-      <h2 id="dialogTitle" data-i18n="modal.title">企业智能的协作运行时</h2>
-      <p class="dialog-lead" data-i18n="modal.lead">VALENCE 不是又一个只生成回答的聊天入口。它把人、专家 Agent、Skill、任务与自动化放进共享上下文，让工作可以持续发生，直到结果被交付。</p>
+      <h2 id="dialogTitle" data-i18n="modal.title">三产品体系中的 AI 中枢</h2>
+      <p class="dialog-lead" data-i18n="modal.lead">VALENCE 位于 ION 数据与 REACTOR 控制之间。它让数据进入 Agent、专家和 Skill 的协作过程，再把形成的决策送往控制与执行；Catalyst 是其中负责协调这场“反应”的 AI 角色。</p>
       <div class="dialog-grid">
-        <article><span>01</span><h3 data-i18n="modal.m1Title">统一交互入口</h3><p data-i18n="modal.m1Desc">用户始终与 Catalyst 对话，专家在后台推进，过程与结果回到同一 Pod。</p></article>
-        <article><span>02</span><h3 data-i18n="modal.m2Title">可组合专业能力</h3><p data-i18n="modal.m2Desc">ION 负责本体与语义，Reactor 负责运筹建模，也可以接入其他 Agent、Skill 与工具。</p></article>
-        <article><span>03</span><h3 data-i18n="modal.m3Title">开放系统边界</h3><p data-i18n="modal.m3Desc">通过 HTTP、MCP 与自定义接口接入现有系统，或把 VALENCE 能力嵌入已有工作流。</p></article>
+        <article><span>01</span><h3 data-i18n="modal.m1Title">核心中枢</h3><p data-i18n="modal.m1Desc">连接上下文、Agent、专家、Skill、任务与自动化，让复杂工作持续推进。</p></article>
+        <article><span>02</span><h3 data-i18n="modal.m2Title">插件容器</h3><p data-i18n="modal.m2Desc">ION、REACTOR 与第三方产品都能作为插件进入，扩展 VALENCE 的能力边界。</p></article>
+        <article><span>03</span><h3 data-i18n="modal.m3Title">API 能力</h3><p data-i18n="modal.m3Desc">VALENCE 也能整体作为 API，将协调、任务与执行能力提供给其他系统。</p></article>
       </div>
       <div class="dialog-actions"><a class="btn primary" href="mailto:hello@valence.chat">hello@valence.chat</a><a class="text-link" href="https://github.com/renyumm" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div>
     </div>
   </dialog>
 
-  <script src="script.js?v=20260825-2"></script>
+  <script src="script.js?v=20260825-3"></script>
 </body>
 </html>

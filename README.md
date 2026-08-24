@@ -1,14 +1,15 @@
 # VALENCE Site
 
-VALENCE 企业智能协作 Runtime 官方展示站。
+VALENCE 三产品体系官方展示站。
 
-## 页面主线
+## 产品关系
 
-- **VALENCE**：统一承载 Pod 上下文、Agent、专家、Skill、任务、自动化与运行结果。
-- **Catalyst**：首席智能体与调度中枢，负责意图理解、能力发现、动态委派、跟踪与汇总。
-- **ION**：企业本体与可治理语义运行层，可独立部署或作为插件接入 VALENCE。
-- **Reactor**：运筹建模、仿真验证与策略运行层，可独立部署或作为插件接入 VALENCE。
-- **开放接入**：支持 HTTP、MCP、自定义 Agent 与 Skill，也可向既有门户和业务系统开放能力。
+- **ION · Data Intelligence**：负责连接、治理与理解企业数据，让数据成为可被 AI 调用的“离子”。
+- **VALENCE · Enterprise Intelligence**：三产品体系的智能中枢，连接人、Agent、专家、Skill、任务与自动化。
+- **Catalyst · Chief Orchestrator**：VALENCE 内部的 AI 协调者，不是第四款产品；负责理解、协调、委派与汇总。
+- **REACTOR · Control & Feedback**：把智能决策转化为经过约束与安全校验的控制策略，并回传执行反馈。
+
+三款产品共享同一 Runtime，可单独购买，也可自由组合为 `ION → VALENCE → REACTOR` 的完整反应链。ION、REACTOR 和第三方能力可作为插件接入 VALENCE；VALENCE 也可整体作为 API 接入其他系统。
 
 ## 本地预览
 
