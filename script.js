@@ -158,6 +158,9 @@ function initDialog() {
   let page = 0;
   let touchStartX = 0;
   let touchStartY = 0;
+  let wheelDelta = 0;
+  let wheelResetTimer;
+  let wheelLocked = false;
 
   const goTo = (index) => {
     page = Math.max(0, Math.min(slides.length - 1, index));
@@ -189,6 +192,22 @@ function initDialog() {
   prev.addEventListener('click', () => goTo(page - 1));
   next.addEventListener('click', () => goTo(page + 1));
   dots.forEach((dot) => dot.addEventListener('click', () => goTo(Number(dot.dataset.page))));
+
+  viewport.addEventListener('wheel', (event) => {
+    event.preventDefault();
+    if (wheelLocked) return;
+    const delta = event.deltaY || event.deltaX;
+    wheelDelta += delta;
+    window.clearTimeout(wheelResetTimer);
+    wheelResetTimer = window.setTimeout(() => { wheelDelta = 0; }, 180);
+    if (Math.abs(wheelDelta) < 40) return;
+    const target = page + (wheelDelta > 0 ? 1 : -1);
+    wheelDelta = 0;
+    if (target < 0 || target >= slides.length) return;
+    goTo(target);
+    wheelLocked = true;
+    window.setTimeout(() => { wheelLocked = false; }, 620);
+  }, { passive: false });
 
   viewport.addEventListener('touchstart', (event) => {
     touchStartX = event.changedTouches[0].clientX;
