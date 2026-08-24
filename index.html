@@ -9,7 +9,17 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css?v=20260825-2" />
+  <style>
+    /* Critical sizing: prevents raw logo artwork from expanding if external CSS is stale or delayed. */
+    img { max-width: 100%; height: auto; }
+    .brand img { width: 42px; height: 42px; object-fit: cover; }
+    .runtime-core img, .plugin-card img { width: 112px; height: 112px; object-fit: cover; }
+    .catalyst-strip img { width: 72px; height: 72px; object-fit: cover; }
+    .product-top img { width: 84px; height: 84px; object-fit: cover; }
+    .runtime-node img { width: 82px; height: 82px; object-fit: cover; }
+    .footer-brand img, .dialog-brand img { width: 50px; height: 50px; object-fit: cover; }
+  </style>
 </head>
 <body>
   <div class="noise" aria-hidden="true"></div>
@@ -203,6 +213,6 @@
     </div>
   </dialog>
 
-  <script src="script.js"></script>
+  <script src="script.js?v=20260825-2"></script>
 </body>
 </html>
